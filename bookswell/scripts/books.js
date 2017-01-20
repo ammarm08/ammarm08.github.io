@@ -1,0 +1,594 @@
+(function () {
+  $(document).ready(function() {
+
+    var globals = {
+      page_increment: 10
+    };
+
+    var config = {
+      genres : $('.genre_filter').map(function() { return $(this).data('genre'); }).toArray(),
+      lengths : $('.filter-by-length button').map(function() { return $(this).data('length'); }).toArray(),
+      ages : $('.filter-by-age button').map(function() { return $(this).data('age'); }).toArray()
+    };
+
+    var state = {
+      store: { // book data + filters active
+        all: [],
+        selected: [],
+        lengths: config.lengths,
+        genres: config.genres,
+        ages: config.ages
+      },
+      page: 0,
+      sort: 'frequencies_title' // default sort
+    };
+
+    var components = {
+      books_list: $('.books-list'),
+      book : $('.book-row'),
+      advanced_toggle: $('.show-advanced'),
+      advanced_filter: $('.advanced-filter'),
+      search: $('.show-results'),
+      age_filter : $('.age_filter'),
+      genre_filter : $('.genre_filter'),
+      length_filter : $('.length_filter'),
+      sorts : $('.dropdown-item')
+    };
+
+    var controller = {
+      initializeTooltips : initializeTooltips,
+      setListeners : setListeners,
+      fetchBooks : fetch_books
+    };
+
+    var listeners = {
+      updateAgeFilter : updateAgeFilter,
+      updateGenreFilter : updateGenreFilter,
+      updateLengthFilter : updateLengthFilter,
+      toggleAdvancedFilters : toggleAdvancedFilters,
+      applyFilters : applyFilters,
+      applySort : applySort,
+      updateModal : updateModal
+    };
+
+    // INIT
+    controller.initializeTooltips();
+    controller.setListeners();
+    controller.fetchBooks(setInitialBooksData);
+
+    // ---------------------------
+    // ---------------------------
+    // -----HELPER FUNCTIONS------
+    // ---------------------------
+    // ---------------------------
+
+    function initializeTooltips () {
+      components.age_filter.tooltip();
+      components.length_filter.tooltip();
+      $('.books-list span').tooltip();
+    }
+
+    function setListeners () {
+      // prevent hover prop from overriding new styling
+      components.search.mouseup(blurComponent);
+
+      // on click, (de)select filters and update state
+      components.age_filter.on('click', listeners.updateAgeFilter);
+      components.genre_filter.on('click', listeners.updateGenreFilter);
+      components.length_filter.on('click', listeners.updateLengthFilter);
+      components.advanced_toggle.on('click', listeners.toggleAdvancedFilters); 
+      components.search.on('click', listeners.applyFilters);
+      components.sorts.on('click', listeners.applySort);
+      components.book.on('click', listeners.updateModal);
+    }
+
+    function fetch_books (callback) {
+      switch (state.sort) {
+        case 'alphabetized_author':
+          callback(DB_DATA.alphabetized_author);
+          break;
+        case 'alphabetized_title':
+          callback(DB_DATA.alphabetized_title);
+          break;
+        case 'frequencies_author':
+          callback(DB_DATA.frequencies_author);
+          break;
+        case 'frequencies_title':
+          callback(DB_DATA.frequencies_title);
+          break;
+        default:
+          callback(DB_DATA.frequencies_title);
+      }
+    }
+
+    function setInitialBooksData (data) {
+      // set state
+      state.store.all = data;
+      state.store.selected = state.store.all;
+
+      // bind data for each book to respective DOM element
+      setDataAttributesForAll();
+      loadNextBooksGroup(state.page, state.store.selected);
+
+      // append pagination and email signup DOM elements
+      append_email_signup();
+
+      // increment page
+      state.page++;
+    }
+
+    function updateBooksData (data) {
+      // empty current books list
+      components.books_list.empty();
+
+      // update state
+      state.store.all = data;
+      state.store.selected = state.store.all;
+
+      // update DOM
+      loadNextBooksGroup(state.page, state.store.selected);
+
+      // increment page #
+      state.page++;
+    }
+
+    function setDataAttributesForAll () {
+      components.book.each(function(i) {
+        var $book = $(this);
+        setDataAttributesForOne($book, i);
+        setBookRecommenderTooltips($book, i);
+      });
+    }
+
+    function setDataAttributesForOne ($book, index) {
+      setBookDataAttributes($book, state.store.selected[index]);
+    };
+
+    function setBookDataAttributes ($book, bookData) {
+      $book.data('book-title', bookData.title);
+      $book.data('book-author', bookData.author);
+      $book.data('book-summary', bookData.summary);
+      $book.data('book-link', bookData.link);
+      $book.data('book-year', bookData.year);
+      $book.data('book-genre', bookData.genre);
+      $book.data('book-reviews', bookData.reviews);
+      $book.data('book-recommenders', bookData.recommenders);
+      $book.data('book-length', bookData.length);
+      $book.data('book-thumbnails', bookData.thumbnails);
+    }
+
+    function setBookRecommenderTooltips ($book, index) {
+      var storedBook = state.store.selected[index];
+
+      $book.find('.img-circle').each(function(i) {
+        var review = storedBook.reviews[i];
+        var recommender = storedBook.recommenders[i];
+
+        // only show review if a review exists
+        var tooltip_text = review === '""' ? recommender : recommender + ': ' + review;
+
+        $(this).attr('title', tooltip_text);
+        $(this).tooltip();
+      })
+    }
+
+    function toggleAdvancedFilters (e) {
+      e.preventDefault();
+
+      if ($('.advanced-filter:visible').length) {
+        components.advanced_filter.hide();
+        components.advanced_toggle.text('Advanced Filters');
+      } else {
+        components.advanced_filter.show();
+        components.advanced_toggle.text('Hide Filters')
+      }
+
+      blurComponent(); // force CSS (prevents user hover)
+    }
+
+    function applyFilters (e) {
+      resetBooksList();
+
+      // update state & DOM
+      state.store.selected = filterData();
+      loadNextBooksGroup(state.page, state.store.selected);
+
+      // remove active state from search button
+      removeActiveFromSearch();
+
+      // increment page
+      state.page++;
+    }
+
+    function applySort (e) {
+      e.preventDefault();
+      resetBooksList();
+
+      state.sort = $(this).data('sort');
+      var sort_text = $('[data-sort="' + state.sort + '"]').text();
+      $('#current-sort').text('Sort By: ' + sort_text)
+
+      fetch_books(updateBooksData);
+    }
+
+    function resetBooksList () {
+      components.books_list.empty();
+      state.page = 0;
+    }
+
+    function filterData () {
+      return state.store.all.filter(function(book) {
+        return isSelectedGenre(book.genre) && isSelectedLength(book.length) && isSelectedAge(book.year);
+      })
+    }
+
+    function isSelectedGenre (g) {
+      return state.store.genres.indexOf(g) !== -1;
+    }
+
+    function isSelectedLength (l) {
+      if (state.store.lengths.indexOf('short') !== -1 && l < 150) {
+        return true;
+      } else if (state.store.lengths.indexOf('medium') !== -1 && l > 150 && l < 400) {
+        return true;
+      } else if (state.store.lengths.indexOf('long') !== -1 && l > 400) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function isSelectedAge (a) {
+      if (state.store.ages.indexOf(1900) !== -1 && a < 1900) {
+        return true;
+      } else if (state.store.ages.indexOf(1901) !== -1 && a >= 1900 && a < 2000) {
+        return true;
+      } else if (state.store.ages.indexOf(2000) !== -1 && a >= 2000) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function blurComponent (e) {
+      $(this).blur();
+    }
+
+    function updateFilter (filter, $component) {
+      return function (e) {
+        e.preventDefault();
+
+        if ($component.data(filter).toString().toLowerCase() === 'all') {
+          setAllAsSelected(filter, $component);
+        } else if ($component.hasClass('active')) {
+          deselectFilter(filter, $component);
+        } else if (userSelectedMany(filter)) {
+          triggerClick(filter);
+        } else {
+          applyActiveClassAndUpdateStore(filter, $component);
+        }
+
+        addActiveToSearch();
+      }
+    }
+
+    function updateLengthFilter (e) { updateFilter('length', $(this))(e) };
+    function updateAgeFilter (e) { updateFilter('age', $(this))(e) };
+    function updateGenreFilter (e) { updateFilter('genre', $(this))(e) };
+
+    function applyActiveClassAndUpdateStore (filter, $component) {
+      $component.addClass('active');
+
+      switch (filter) {
+        case 'length':
+          $('.all_lengths').removeClass('active');
+          state.store.lengths = fetchActiveFilters('length', $('.filter-by-length .active'));
+          break;
+        case 'age':
+          $('.all_ages').removeClass('active');
+          state.store.ages = fetchActiveFilters('age', $('.filter-by-age .active'));
+          break;
+        case 'genre':
+          $('.all_genres').removeClass('active');
+          state.store.genres = fetchActiveFilters('genre', $('.filter-by-genre .active'));
+          break;
+        default:
+          applyActiveClassAndUpdateStore('length', $component);
+      }
+    }
+
+    function setAllAsSelected (filter, $component) {
+      switch (filter) {
+        case 'length':
+          setAsUniquelyActive(components.length_filter, $component);
+          state.store.lengths = config.lengths;
+          break;
+        case 'age':
+          setAsUniquelyActive(components.age_filter, $component);
+          state.store.ages = config.ages;
+          break;
+        case 'genre':
+          setAsUniquelyActive(components.genre_filter, $component);
+          state.store.genres = config.genres;
+          break;
+        default:
+          setAllAsSelected('length', $component);
+      }
+    }
+
+    function deselectFilter (filter, $component) {
+      removeActiveClass($component);
+
+      switch (filter) {
+        case 'length':
+          state.store.lengths = updateFilterOptions(state.store.lengths, 'length', $component);
+          break;
+        case 'age':
+          state.store.ages = updateFilterOptions(state.store.ages, 'age', $component);
+          break;
+        case 'genre':
+          state.store.genres = updateFilterOptions(state.store.genres, 'genre', $component);
+          break;
+        default:
+          deselectFilter('length', $component);
+      }
+    }
+
+    function userSelectedMany (filter) {
+      switch (filter) {
+        case 'length':
+          return $('.filter-by-length .active').length >= 2;
+          break;
+        case 'age':
+          return $('.filter-by-age .active').length >= 2;
+          break;
+        case 'genre':
+          return $('.filter-by-genre .active').length >= 6;
+          break;
+        default:
+          userSelectedMany('length');
+      }
+    }
+
+    function triggerClick (filter) {
+      var selector = '.all_' + filter + 's';
+      $(selector).trigger('click');
+    }
+
+    function addActiveToSearch () {
+      if (!components.search.hasClass('active')) {
+        components.search.addClass('active');
+      }
+    }
+
+    function removeActiveFromSearch () {
+      if (components.search.hasClass('active')) {
+        components.search.removeClass('active');
+      }
+    }
+
+    function setAsUniquelyActive($selectors, $target) {
+      $selectors.removeClass('active');
+      $target.addClass('active');
+    }
+
+    function removeActiveClass($target) {
+      $target.removeClass('active');
+      $target.blur();
+    }
+
+    function updateFilterOptions(filter_list, type, $target) {
+      return filter_list.filter(function(item) {
+        return item !== $target.data(type);
+      })
+    }
+
+    function fetchActiveFilters (filter, $actives) {
+      return $actives.map(function(el, i) {
+        return $(this).data(filter);
+      }).toArray();
+    }
+
+    // LOAD NEXT 15 results
+    function loadNextBooksGroup(page, book_data) {
+      var next_page_start = page * globals.page_increment;
+      var next_page_end = globals.page_increment + page * globals.page_increment;
+      var next_visible_group = book_data.slice(next_page_start, next_page_end);
+
+      append_all_to_table(next_visible_group);
+      append_pagination(book_data);
+    }
+
+    // APPEND A LIST OF BOOKS
+    function append_all_to_table(books) {
+      books.forEach(function(book, i) {
+        append_one_to_table(book, i);
+      });
+
+      append_email_signup();
+    }
+
+    function append_email_signup() {
+      if ($('#email-signup').length === 0) {
+        var $email = $('<a id="email-signup" class="list-group-item"> Get early access to new books and exclusive author interviews. </a>');
+
+        $email.attr('href', 'http://eepurl.com/b5XRYX'); // link to Mailchimp signup
+        $email.attr('target', '_blank');
+
+        $('.books-list li:eq(4)').after($email); // after 4th book result, append email sign-up nag
+      }
+    }
+
+    function append_pagination(book_data) {
+      var total = book_data.length;
+      var current = calculateBooksCurrentlyViewed(total);
+
+      var $next_results = $('<a class="next_results"></a>');
+      $next_results.text('More Results (viewing ' + current + ' of ' + total + ')');
+      $next_results.click({book_data: book_data}, showMoreResults); // on click, show more results
+
+      components.books_list.append($next_results);
+    }
+
+    function append_one_to_table (book, i) {
+      // prepare DOM elements
+      var $row = $('<li class="list-group-item book-row" style="display: none"></li>');
+
+      var $book = $('<div class="book" data-toggle="modal" data-target="#bookModal"></div>');
+      var $title = $('<div class="book_title">' + formatTitle(book.title) + '</div>');
+      var $author = $('<div class="book_author">' + book.author + '</div>');
+
+      var $data = $('<div class="book_data"></div>');
+      var $genre = $('<div class="book_genre">' + book.genre + '</div>');
+      var $length = $('<div class="book_length">' + book.length + ' pages  (' + formatYear(book.year) + ')</div>');
+
+      var $recommenders = $('<div class="book_recommenders"></div>');
+
+      // book data bindings and recommender thumbnails
+      setBookDataAttributes($book, book);
+      setListThumbnails(book, $recommenders);
+      setRecommenderChevron(book, $recommenders);
+      $book.on('click', updateModal);
+
+      // APPEND TO DOM
+      $book.append($title).append($author);
+      $data.append($genre).append($length);
+      $row.append($book)
+          .append($data)
+          .append($recommenders);
+
+      components.books_list.append($row);
+      $row.fadeIn(1000);
+    }
+
+    function calculateBooksCurrentlyViewed (total) {
+      return total <= globals.page_increment + state.page * globals.page_increment ? total : globals.page_increment + state.page * globals.page_increment; // factor of 15 unless on last page
+    }
+
+    function showMoreResults (e) {
+      this.remove();
+      e.preventDefault();
+      loadNextBooksGroup(state.page, e.data.book_data);
+      state.page++;
+    }
+
+    function formatYear (year) {
+      if (year < 0) {
+        return parseInt(Math.abs(year)) + ' BC';
+      } else if (parseInt(year) < 1400) {
+        return parseInt(year) + ' AD';
+      } else {
+        return year;
+      }
+    }
+
+    function formatTitle (title) {
+      if (title.length > 50) {
+        return title.slice(0,50) + '...';
+      } else {
+        return title;
+      }
+    }
+
+    function calculateReviewIndex (reviews) {
+      var i = 0;
+      var review_index = -1;
+
+      while (i < reviews.length) {
+        if (reviews[i] !== '""') {
+          review_index = i;
+          break;
+        } else {
+          i++;
+        }
+      }
+
+      return review_index;
+    }
+
+    function setDefaultReview (reviews, recommenders) {
+      var review_index = calculateReviewIndex(reviews);
+      var review_text = reviews[review_index];
+      var reviewer = recommenders[review_index];
+
+      var $review = $('<div></div>');
+      if (review_text) {
+        $review.text(review_text + ' - ' + reviewer);
+      } else {
+        $review.text('None found.');
+      }
+      
+      return $review;
+    }
+
+    function setModalThumbnails (recommenders, thumbnails) {
+      for (var i = 0; i < recommenders.length; i++) {
+        var $thumb = $('<img class="img-circle"/>');
+
+        $thumb.data('toggle', 'tooltip');
+        $thumb.attr('title', 'Recommended by ' + recommenders[i]);
+        $thumb.attr('src', thumbnails[i]);
+
+        $('.modal-recommenders').append($thumb);
+        $thumb.tooltip();
+      }
+    }
+
+    function updateModal (e) {
+      // clear previous values
+      $('.modal-review').empty();
+      $('.modal-recommenders').empty();
+
+      // update values
+      $('.modal-title').text($(this).data('book-title'));
+
+      if (!$(this).data('book-summary').length) {
+        $('.modal-about').text("We don't have one yet in our system, but it'll be here soon! Help us out by suggesting an edit :)");
+      } else {
+        $('.modal-about').text($(this).data('book-summary'));
+      }
+      
+      $('.modal-blurb').text($(this).data('book-author'));
+      $('.get-book').attr('href', $(this).data('book-link')).attr('target', '_blank');
+      $('.modal-image').attr('src', 'https://images-na.ssl-images-amazon.com/images/I/41YdCQ5bIAL.jpg');
+      $('.modal-year').text(formatYear($(this).data('book-year')));
+      $('.modal-length').text($(this).data('book-length') + ' pages');
+      $('.modal-genre').text($(this).data('book-genre'));
+
+      // set default review text
+      var $review = setDefaultReview($(this).data('book-reviews'), $(this).data('book-recommenders'));
+      $('.modal-review').append($review);
+
+      // set recommender thumbnails
+      setModalThumbnails($(this).data('book-recommenders'), $(this).data('book-thumbnails'));
+    }
+
+    function setListThumbnails (book, $recommenders) {
+      for (var i = 0; i < book.recommenders.length; i++) {
+        var $thumb = $('<img class="img-circle"/>');
+
+        var recommender = book.recommenders[i];
+        var review = book.reviews[i] === '""' ? null : book.reviews[i].trim();
+        var tooltip_text = review ? recommender + ': ' + review : recommender;
+
+        $thumb.data('toggle', 'tooltip');
+        $thumb.attr('title', tooltip_text);
+        $thumb.attr('src', book.thumbnails[i]);
+
+        $recommenders.append($thumb);
+        $thumb.tooltip();
+      }
+    }
+
+    function setRecommenderChevron (book, $recommenders) {
+      var $span = $('<span><a href="#"></a></span>');
+      $span.addClass('glyphicon glyphicon-option-vertical');
+
+      $span.data('toggle', 'tooltip');
+      $span.attr('title', book.recommenders.join(', '));
+      $span.tooltip();
+
+      $recommenders.append($span);
+    }
+  })
+})();
