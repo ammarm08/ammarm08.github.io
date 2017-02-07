@@ -40,7 +40,7 @@ body {
 }
 
 .navbar .navbar-brand:hover {
-  color: #ff4742;
+  color: #181D27;
   cursor: pointer;
   opacity: 0.5;
 }
@@ -51,11 +51,11 @@ body {
 
 .navbar .active a {
   background-color: white !important;
-  border-bottom: 4px solid #ff4742;
+  border-bottom: 4px solid #181D27;
 }
 
 #join-list {
-  color: #ff4742;
+  color: #181D27;
 }
 
 #join-list:hover {
@@ -63,7 +63,7 @@ body {
 }
 
 .glyphicon-collapse-down {
-  color: #ff4742;
+  color: #181D27;
 }
 
 /* SUBSCRIBE */
@@ -93,21 +93,21 @@ body {
 }
 
 #app button:hover {
-  color: #ff4742;
+  color: #181D27;
   background-color: white;
-  border-color: #ff4742;
+  border-color: #181D27;
 }
 
 #app button:active, #app button:focus {
   color: white;
-  background-color: #ff4742;
+  background-color: #181D27;
   outline: none;
 }
 
 #app .active, #app .active:hover, #app .active:focus {
   color: white;
-  background-color: #ff4742;
-  border: 1px solid #ff4742;
+  background-color: #181D27;
+  border: 1px solid #181D27;
   border-radius: 1px;
   outline: none;
 }
@@ -147,13 +147,13 @@ body {
 }
 
 .filter-options .show-results, .filter-options .show-advanced {
-  border: 2px solid #ff4742;
+  border: 2px solid #181D27;
   color: #ff4742;
   background: white;
 }
 
 .filter-options button:hover, .filter-options .active, .filter-options:focus {
-  border: 2px solid #ff4742;
+  border: 2px solid #181D27;
   color: #ff4742;
   background: white;
 }
@@ -166,7 +166,7 @@ body {
 
 .dropdown button:hover, .dropdown button:active, .dropdown button:focus {
   background-color: white !important;
-  border: 2px solid #ff4742 !important;
+  border: 2px solid #181D27 !important;
   color: #ff4742 !important;
 }
 
@@ -181,7 +181,7 @@ body {
 
 .dropdown-item:hover {
   background-color: white;
-  color: #ff4742;
+  color: #181D27;
 }
 
 #menu-down {
@@ -295,7 +295,7 @@ body {
 #email-signup {
   text-align: center;
   min-height: 40px;
-  background-color: #ff4742;
+  background-color: #181D27;
   color: white;
   border-radius: 8px;
   text-decoration: underline;
@@ -340,14 +340,14 @@ body {
 }
 
 .get-book {
-  background-color: #ff4742;
+  background-color: #181D27;
   color: white;
-  border: 2px solid #ff4742;
+  border: 2px solid #181D27;
   border-radius: 1px;
 }
 
 .get-book:hover {
-  background-color: #ff4742;
+  background-color: #181D27;
   color: white;
 }
 
@@ -403,14 +403,14 @@ body {
 }
 
 .modal-edit-book a {
-  background-color: #ff4742;
+  background-color: #181D27;
   color: white;
-  border: 2px solid #ff4742;
+  border: 2px solid #181D27;
   border-radius: 1px;
 }
 
 .modal-edit-book a:hover {
-  background-color: #ff4742;
+  background-color: #181D27;
   color: white;
 }
 
@@ -535,18 +535,6 @@ footer {
   color: #999999;
   outline: none;
   text-decoration: none;
-}
-
-/* GOOD READS WIDGET */
-
-#gr_add_to_books {
-  height: 30px;
-  overflow: hidden;
-  margin: 10px;
-}
-
-#gr_add_to_books:hover {
-  height: 110px;
 }
 
 /* VIEWPORTS */
