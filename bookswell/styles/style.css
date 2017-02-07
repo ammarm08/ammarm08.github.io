@@ -148,13 +148,13 @@ body {
 
 .filter-options .show-results, .filter-options .show-advanced {
   border: 2px solid #181D27;
-  color: #ff4742;
+  color: #181D27;
   background: white;
 }
 
 .filter-options button:hover, .filter-options .active, .filter-options:focus {
   border: 2px solid #181D27;
-  color: #ff4742;
+  color: #181D27;
   background: white;
 }
 
@@ -167,7 +167,7 @@ body {
 .dropdown button:hover, .dropdown button:active, .dropdown button:focus {
   background-color: white !important;
   border: 2px solid #181D27 !important;
-  color: #ff4742 !important;
+  color: #181D27 !important;
 }
 
 .dropdown-item {
