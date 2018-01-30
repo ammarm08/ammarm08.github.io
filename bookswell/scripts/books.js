@@ -76,7 +76,7 @@
       components.age_filter.on('click', listeners.updateAgeFilter);
       components.genre_filter.on('click', listeners.updateGenreFilter);
       components.length_filter.on('click', listeners.updateLengthFilter);
-      components.advanced_toggle.on('click', listeners.toggleAdvancedFilters); 
+      components.advanced_toggle.on('click', listeners.toggleAdvancedFilters);
       components.search.on('click', listeners.applyFilters);
       components.sorts.on('click', listeners.applySort);
       components.book.on('click', listeners.updateModal);
@@ -410,7 +410,7 @@
 
     function append_email_signup() {
       if ($('#email-signup').length === 0) {
-        var $email = $('<a id="email-signup" class="list-group-item"> Get early access to new books and exclusive author interviews. </a>');
+        var $email = $(`<a id="email-signup" class="list-group-item"> I'm working on a book! Sign up for early access. </a>`);
 
         $email.attr('href', 'http://eepurl.com/b5XRYX'); // link to Mailchimp signup
         $email.attr('target', '_blank');
@@ -517,7 +517,7 @@
       } else {
         $review.text('None found.');
       }
-      
+
       return $review;
     }
 
@@ -547,7 +547,7 @@
       } else {
         $('.modal-about').text($(this).data('book-summary'));
       }
-      
+
       $('.modal-blurb').text($(this).data('book-author'));
       $('.get-book').attr('href', $(this).data('book-link')).attr('target', '_blank');
       $('.modal-image').attr('src', 'https://images-na.ssl-images-amazon.com/images/I/41YdCQ5bIAL.jpg');
