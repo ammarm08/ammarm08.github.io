@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>Ammar Mian</title>
+  <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i" rel="stylesheet">
+  <link href="/styles/main.css?v=0.0.1" rel="stylesheet">
   <link rel="shortcut icon" href="https://s3.amazonaws.com/bookswell-media/img-assets/favicon.ico" type="image/x-icon"/>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113300653-1"></script>
@@ -12,73 +15,6 @@
 
   gtag('config', 'UA-113300653-1');
 </script>
-
-  <style type="text/css">
-    body {
-      font-family: 'Avenir';
-      color: black;
-      font-size: 12pt;
-    }
-
-    .main {
-      margin: 10px 10%;
-      width: 40%;
-    }
-    .inner {
-      margin: 20px auto;
-      width: 100%;
-    }
-
-    .name {
-      margin-bottom: 50px;
-    }
-
-    .name h2 {
-      color: red;
-    }
-
-    blockquote {
-      width: 90%;
-      margin: 0;
-      padding: 16px;
-      margin-bottom: 50px;
-      background-color: #f5f8fa;
-    }
-
-    /* parent div for a conversation */
-    .conversation {
-      width: 75%;
-      margin: 0 auto;
-      padding: 16px;
-      border-left: 4px solid #f5f8fa;
-      border-right: 4px solid #f5f8fa;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      padding: 4px;
-      margin: 0;
-    }
-
-    a {
-      color: #337ab7;
-    }
-
-    a:active {
-      color: #ff4742;
-    }
-
-    @media screen and (max-width: 768px) {
-      .main {
-        width: 90%;
-        margin: 10px auto;
-      }
-    }
-  </style>
   <meta http-equiv="Content-Language" content="en-us">
   <meta name="google" value="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -93,47 +29,58 @@
 
     <div class="inner">
 
-      <blockquote>
-        "Absorb what is useful.
-        Reject what is useless.
-        Add what is essentially your own."
-        - Bruce Lee
-      </blockquote>
+      <div class="sub">
+        <h3>About Me</h3>
+        <ul>
+          <li>I enjoy learning about how things grow, break, age, and thrive.</li>
+          <li>Mornings: spine, joints.</li>
+          <li>Afternoons: software, teams.</li>
+          <li>Evenings: food, soul, relationships.</li>
+          <br/>
+          <li><strong>Currently</strong></li>
+          <li>Studying Compilers and Computer Networking with Oz Onay at <a href="https://bradfieldcs.com/" target="_blank">Bradfield</a>.</li>
+          <li>Unfucking my body with Johnny Sapinoso of <a href="https://sfmovementpractice.pike13.com/pages/sf-movement-practice" target="_blank">SF Movement Practice</a>.</li>
+          <li>Getting married to my best friend in September :) Moving to NYC thereafter.</li>
+          <br/>
+          <li><strong>Previously</strong></li>
+          <li>Managing Director of Technology at <a href="https://www.nytimes.com/interactive/2017/12/28/upshot/sexual-harassment-survey-600-men.html" target="_blank">Morning Consult</a>.</li>
+        </ul>
+      </div>
 
-      <h3>About Me</h3>
-      <ul>
-        <li>I enjoy learning about how things grow, break, age, and thrive.</li>
-        <li>Mornings: spine, joints.</li>
-        <li>Afternoons: <a href="https://www.wired.com/2017/02/trump-hate-tweeting-find-really-crisis/" target="_blank">software</a>, teams.</li>
-        <li>Evenings: food, soul, relationships.</li>
-        <br/>
-        <li>Email: ammar dot x dot mian at gmail dot com</li>
-      </ul>
+      <div class="sub">
+        <h3>Bookshelf</h3>
+        <ul>
+          <li><i>Free+Style</i> - Carlo Paoli</li>
+          <li><i>Yoga: Immortality and Freedom</i> - Mircea Eliade</li>
+          <li><i>The Holotropic Mind</i> - Stanislav Grof</li>
+          <li><i>Man and His Symbols</i> - Carl Jung</li>
+          <li><i>Linux Systems Programming</i> - Robert Love</li>
+        </ul>
+        <p>
+        <a href="https://docs.google.com/document/d/1id0F2QhmnPvjaXvShMYpWb0PsoOBG-jrs3z8nb4kUYU/edit" target="_blank">(full list)</a>
+        </p>
+      </div>
 
-      <h3>Bookshelf</h3>
-      <ul>
-        <li><i>Yoga: Immortality and Freedom</i> - Mirceau Eliade</li>
-        <li><i>Catalytic Coaching</i> - Garold Markle</li>
-        <li><i>Slack</i> - Tom DeMarco</li>
-        <li><i>The Linux Programming Interface</i> - Michael Kerrisk</li>
-      </ul>
-      <p>
-      <a href="https://docs.google.com/document/d/1id0F2QhmnPvjaXvShMYpWb0PsoOBG-jrs3z8nb4kUYU/edit" target="_blank">(full list)</a>
-      </p>
+      <div class="sub">
+        <h3>Recent Essays</h3>
+        <ul>
+          <li>Currently on hiatus. Be back soon!</li>
+        </ul>
+        <p>
+        <a href="/posts">(archive)</a>
+        </p>
+      </div>
 
-      <h3>Recent Essays</h3>
-      <ul>
-        <li>Currently on hiatus. Be back soon!</li>
-      </ul>
-      <p>
-      <a href="/posts">(archive)</a>
-      </p>
+      <div class="sub">
+        <h3>Projects</h3>
+        <ul>
+          <li><i><a href="/bookswell">Bookswell</a></i> - Book recs from your heroes</li>
+          <li><i><a href="https://us3.campaign-archive.com/home/?u=307d0a47417a39a6a788cff9f&id=f1720fcd45" target="_blank">Survival Aesthetics</a></i> - Keeping the good and discarding the bad of modernity</li>
+        </ul>
+      </div>
 
-      <h3>Projects</h3>
-      <ul>
-        <li><i><a href="/bookswell">Bookswell</a></i> - Book recs from your heroes</li>
-        <li><i><a href="https://us3.campaign-archive.com/home/?u=307d0a47417a39a6a788cff9f&id=f1720fcd45" target="_blank">Survival Aesthetics</a></i> - Keeping the good and discarding the bad of modernity</li>
-      </ul>
+      <p>Email: ammar dot x dot mian at gmail dot com</p>
+
 
     </div>
   </div>
