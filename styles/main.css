@@ -49,13 +49,13 @@
   }
   .sub h3 {
     font-size: 14pt;
+    color: black;
     margin: 8px 0;
   }
 
   /* parent div for a conversation */
   .conversation {
-    width: 100%;
-    margin: 0 auto;
+    width: 75%;
     padding: 16px;
     border-left: 4px solid #f5f8fa;
   }
@@ -64,5 +64,8 @@
     .main {
       width: 90%;
       margin: 10px auto;
+    }
+    li {
+      margin: 10px 0;
     }
   }
