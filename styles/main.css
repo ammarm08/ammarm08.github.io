@@ -44,6 +44,8 @@
 
   .name h2 {
     font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
     font-size: 28pt;
     color: black;
   }
