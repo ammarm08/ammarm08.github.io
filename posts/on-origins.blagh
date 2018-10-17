@@ -1,0 +1,194 @@
+<globals>
+  $display-title$ := On Origins
+  $title$ := Origin Stories Matter
+  $date$ := July 2018
+</globals>
+
+<macros>
+  $conversation$ := <div class="conversation">{}</div>
+</macros>
+
+<content>
+  <p>
+  The way things grow depends on the way they were incubated. It is extremely difficult to force something to grow in a way it was not "designed" to grow. Alternately, it is more possible than we think to change the way things are, as long as we know that it is the "blueprint" that must change, not the "current thing itself." If the blueprint cannot change, then the thing will not change.
+  </p>
+  <p>
+  Some examples.
+  </p>
+  <p>
+  First. Recent research in epigenetics suggests that our diet can prevent or promote the expression of certain genes. Given a poor diet, certain genes remain dormant for generations; given a strong diet, they come to life. That is a wild, if dangerous, idea. The implication here is also that there are genes that are (as far as we can tell) unalterable in their expression. We can become whoever we want to become, up to a point.
+  </p>
+  <p>
+  Second. There are certain sets of shared symbols we use to make sense of life that play an unconscious role in how we view ourselves, each other, and the world. Some of these are universal; many of these vary culture to culture. For instance, a mix of the Protestant and Puritan work ethic drives much of how we conceptualize Work in the United States. By understanding these symbols (or "memes") better, we can more reliably change our attitudes towards life.
+  </p>
+
+  <h3>
+  The DNA of a Company
+  </h3>
+  <p>
+  Third (and the subject of the rest of this essay). Origin stories matter for companies. How a company begins determines how it will continue. The personalities and values championed in the early days will be the same ones championed as the founders grow an organization around them.
+  </p>
+  <p>
+  They are the DNA. This genetic material promotes a limited set of environments in which it will thrive. Fighting this reality by attempting to shoehorn a culture at odds with the origin story is most probably unwise. Most of the successful companies you see went through harrowing growing pains during which founders had to completely change themselves or otherwise be ushered out of the company
+  (great podcast episode <a href="https://www.gimletmedia.com/startup/shadowed-qualities-season-4-episode-3" target="_blank">here</a> observing this happen real-time).
+  </p>
+
+  <h3>
+  Compatible Organizational Structures
+  </h3>
+  <p>
+  These conditions favor some shapes of an organization over others. Most organizations are some composite of several of these shapes (and I am certain that I'm leaving some out).
+  </p>
+
+
+  <h4>Command-And-Control</h4>
+
+  <p>
+  This is the Steve Jobs model.
+  </p>
+  <p>
+  A single product visionary painstakingly micromanages and monitors every facet of the business, from engineering to design to marketing to sales to PR.
+  </p>
+  <p>
+  This works if the visionary is truly in the 0.01% of all system operators, as his/her values, ideals, and principles become deeply imprinted into everyone in the company. This does not work if the visionary is not as visionary as he/she thinks. Ah yes, the Silicon Valley Dilemma.
+  </p>
+
+  <h4>
+  Decentralized Network
+  </h4>
+
+  <p>
+  This is the Team of Teams model.
+  </p>
+  <p>
+  Hierarchy only exists to align the layers below towards solving a particular problem. The details of the solution are left to the teams to own and deliver themselves.
+  </p>
+  <p>
+  This works if there is high organization-wide alignment in vision, goals, and problems to solve. This does not work whatsoever if the general purpose and direction of the company are not well established or distributed.
+  </p>
+
+  <h4>
+  Silo-By-Function
+  </h4>
+  <p>
+  This is the Amazon/Microsoft model.
+  </p>
+  <p>
+  Teams are divided cleanly by their business function, and there is little overlap between teams. Each team has a life of its own, depending on who rests at the top of its hierarchy. Teams expose an "external API" for others to interface with. Relationships between teams are at best helpful/standardized and at worst adversarial/opaque.
+  </p>
+  <p>
+  This works when these interfaces are treated with obsessive attention to quality, as they are the organization's vehicle for internal communication/collaboration. This does not work when these interfaces grow cumbersome to "use" and thus relationships between teams grow adversarial and resentful.
+  </p>
+
+  <h4>
+  Classic Hierarchy
+  </h4>
+  <p>
+  This is the hedge fund/management consulting model.
+  </p>
+  <p>
+  A small group of senior staff operate as the brain of the organization, having disproportionate control over product direction, prioritization, and delegation. A larger group of junior members and apprentices work on high-quantity, low-complexity tasks to sharpen their axes and prepare for ascension into the brain trust. This is the management-consulting/law-firm "up or out" philosophy.
+  </p>
+  <p>
+  This works if the brain trust continues to allow new members to truly join it (not just in name but in practice) and if the brain trust functions as mentors/coaches to the apprentices. This does not work if ascension is only nominally possible, if apprentices feel they need to politick to grow, and if trust within teams is not distributed slowly but surely over time.
+  </p>
+  </p>
+  <p>
+  Many company have failed as they orient themselves to grow in ways that do not behoove their nature. It's outside the scope of this essay to discuss which types of initial conditions produce excellent organizations. Broadly speaking, the answer to that depends on what the company is building and what environmental conditions it is building it in.
+  </p>
+
+  <h3>
+  Why Does This Matter?
+  </h3>
+
+  <p>
+  Origin stories and their light + shadow qualities constrain the way we organize our teams. It also constrains the type of employees we hire and retain (and how we retain them). There is no such thing as "unbiased"; there is only bias that is explicitly/implicitly permitted. Origin stories typically decide which implicit biases are permissible, through which an organization will find its shape.
+  </p>
+  <p>
+  Organizational structure is like a data structure. It defines how information flows around a group that is presumably striving towards a shared mission.
+  </p>
+  <p>
+  Organizational structure, as permitted by the "genetic material" of a company, forms the Jungian collective unconscious of what it means to work and thrive at that company. The values, the habits, the attitudes towards work, the priorities, the crises -- these all converge together to form a sort of algorithm for how a given individual in a given role decides how to be successful at her job.
+  </p>
+  <p>
+  As an organization grows, and as information flows become less natural, so too grows the potential for conflict. And this is why origin stories matter: there's no one "way" that is unreservedly better than another way. But the one constant in the face of company growth and attrition is people and how they make sense of themselves and their work.
+  </p>
+  <p>
+  This one constant is always in flux.
+  </p>
+  <p>
+  If success at a company begins to resemble a bullshitting algorithm, then many employees will begin to defect in weird ways. They will leave; they will politick; they will backstab and gossip; they will phone it in. Your company will begin to look like <a href="https://www.ribbonfarm.com/2009/10/07/the-gervais-principle-or-the-office-according-to-the-office/" target="_blank">this</a>. It will take forever to do anything useful. And so you'll stop trying to do anything useful at all.
+  </p>
+  <p>
+  Lawyer/economist Ronald Coase described this dynamic in his landmark book <em>The Firm, the Market, and the Law</em>:
+  </p>
+  <blockquote>
+  <p>
+  "The limit to the size of the firm is set where its costs of organizing a transaction become equal to the cost of carrying it out through the market. This determines what the firm buys, produces, and sells."
+  </p>
+  </blockquote>
+
+  <p>
+  Or let's go to Franz Kafka for a more cynical take:
+  </p>
+  <blockquote><p>
+  "Every revolution evaporates and leaves behind only the slime of a new bureaucracy."
+  </p></blockquote>
+  <p>
+  Many ambitious organizations wish to grow. Many successfully ambitious organizations become great places to work. Many successful organizations eventually grow too big and become mediocre.
+  </p>
+  <p>
+  How long an organization (or a community, or a society, or a family) can go without becoming mediocre depends as much on its culture as it does on its purpose. Without execution of purpose, there is no business in the short run. Without culture, there will be no business in the long run.
+  </p>
+  <p>
+  AirBNB CEO Brian Chesky sent out a <a href="https://medium.com/@bchesky/dont-fuck-up-the-culture-597cde9ee9d4" target="_blank">message</a> to his team back in 2014 that alluded to this reality. I will share this email in its entirety below.
+  </p>
+
+  <conversation>
+    <p>
+    Hey team,
+    </p>
+    <p>
+    Our next team meeting is dedicated to Core Values, which are essential to building our culture. It occurred to me that before this meeting, I should write you a short letter on why culture is so important to Joe, Nate, and me.
+    </p>
+    <p>
+    After we closed our Series C with Peter Thiel in 2012, we invited him to our office. This was late last year, and we were in the Berlin room showing him various metrics. Midway through the conversation, I asked him what was the single most important piece of advice he had for us.
+    </p>
+    <p>
+    He replied, "Don't fuck up the culture."
+    </p>
+    <p>
+    This wasn't what we were expecting from someone who just gave us $150M. I asked him to elaborate on this. He said one of the reasons he invested in us was our culture. But he had a somewhat cynical view that it was practically inevitable once a company gets to a certain size to "fuck it up." Hmm.. How depressing I thought.
+    </p>
+    <p>
+    Were we destined to eventually "fuck up our culture?" We talked about it a bit more, and it became clear that it was possible to defend, and actually build the culture. But it had to be one of the things we were most focused on. I thought to myself, how many company CEOs are focused on culture above all else? Is it the metric they measure closest? Is it what they spend most of their hours on each week?
+    </p>
+    <p>
+    Culture is simply a shared way of doing something with passion.
+    </p>
+    <p>
+    Our culture is the foundation for our company. We may not be remembered for much after we are gone, and if Airbnb is around 100 years from now, surely we won't be a booking website for homes. We will be far past this in our evolution (not to mention that kids 100 years from now will be asking their grandparents what websites were).
+    </p>
+    <p>
+    The thing that will endure for 100 years, the way it has for most 100 year companies, is the culture. The culture is what creates the foundation for all future innovation. If you break the culture, you break the machine that creates your products.
+    </p>
+    <p>
+    So how do we build culture?
+    </p>
+    <p>
+    By upholding our core values in everything we do. Culture is a thousand things, a thousand times. It's living the core values when you hire; when you write an email; when you are working on a project; when you are walking in the hall. We have the power, by living the values, to build the culture. We also have the power, by breaking the values, to fuck up the culture. Each one of us has this opportunity, this burden.
+    </p>
+    <p>
+    Why is culture so important to a business? Here is a simple way to frame it. The stronger the culture, the less corporate process a company needs. When the culture is strong, you can trust everyone to do the right thing. People can be independent and autonomous. They can be entrepreneurial. And if we have a company that is entrepreneurial in spirit, we will be able to take our next "(wo)man on the moon" leap. Ever notice how families or tribes don't require much process? That is because there is such a strong trust and culture that it supersedes any process. In organizations (or even in a society) where culture is weak, you need an abundance of heavy, precise rules and processes.
+    </p>
+    <p>
+    There are days when it's easy to feel the pressure of our own growth expectations. Other days when we need to ship product. Others still where we are dealing with the latest government relations issue. It's easy to get consumed by these. And they are all very important. But compared to culture, they are relatively short-term. These problems will come and go. But culture is forever.
+    </p>
+    <p>
+    Brian
+    </p>
+  </conversation>
+  <p>
+  The soft stuff ends up mattering most in the places occupied by those who find it the least necessary. The biggest technical problem is almost invariably a human problem. Culture matters.
+  </p>
+</content>
