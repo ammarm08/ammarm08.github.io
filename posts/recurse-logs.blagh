@@ -71,7 +71,7 @@ In the evening, Alina and I set up our mattress and bedding.
 Day 5 (9/28)
 </h3>
 <p>
-I’m at Kettlespace HQ all day getting up to speed. Maybe I’ll have some time tonight to read some more Redis code.
+I’m at client HQ all day getting up to speed. Maybe I’ll have some time tonight to read some more Redis code.
 </p>
 <h3>
 Day 6 (10/1)
@@ -115,7 +115,7 @@ Anyways, asynchat can handle concurrent clients and consumes only n bytes per I/
 Day 10 (10/5)
 </h3>
 <p>
-Felt sick today and was supposed to go into Kettlespace HQ. Instead worked from home all day. There were quite a few things to nail down today, but we got things done. On to the weekend.
+Felt sick today and was supposed to go into client HQ. Instead worked from home all day. There were quite a few things to nail down today, but we got things done. On to the weekend.
 </p>
 <h3>
 Day 11 (10/8)
@@ -129,7 +129,7 @@ The databases group met up again. A batchmate has kindly created a GitHub repo a
 Day 12 (10/9)
 </h3>
 <p>
-Today was a scratch. Had some personal stuff come up I had to attend to. Also ran a technical interview on behalf of Kettlespace.
+Today was a scratch. Had some personal stuff come up I had to attend to. Also ran a technical interview on behalf of my client.
 
 On the brightside, in the afternoon, I decided to start writing a command-line utility to make writing blog posts for my website easier. Previously, I had to manually write all the html for it myself. But the format of each blog post (in terms of markup + formatting) is consistent. So I’m adding a light abstraction layer above that that injects JSON properties into a template HTML file. And writing it in Python because I want to get better at Python.
 </p>
