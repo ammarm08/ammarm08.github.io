@@ -1,7 +1,7 @@
 <globals>
   $display-title$ := Recurse Logs
   $title$ := Recurse Logs
-  $date$ := last updated: October 18, 2018
+  $date$ := last updated: October 23, 2018
 </globals>
 
 <macros>
@@ -184,6 +184,39 @@ Out of these two, the second one seems like one I’d be most excited to do (and
 Day 19 (10/18)
 </h3>
 
+<p>
 This morning, I grabbed coffee with a batchmate. We talked a bit about Clojure, Datomic, Rich Hickey, and reasoning about systems + the effects they produce. I spent the afternoon thinking more about the online coaching/school idea I had from yesterday, sending some feelers out to people I know who would be target customers.
+</p>
 
+<h3>
+Day 20 (10/19)
+</h3>
+
+<p>
+Onsite at client HQ. I ran a technical interview for a senior engineer candidate. He was really good. Otherwise, I spec'ed out an internal tool with the head of marketing. Then I went dancing in East Village with the wife and the amigos.
+</p>
+
+<h3>
+Day 21 (10/22)
+</h3>
+
+<p>
+Our building's rooftop lounge is amazing, so I chose to work from there this morning. I still am enchanted by the online coaching/school idea that's been festering. So I set up a splash page via Unbounce, wrote some basic copy, and bought 50 dollars in Bing ads. We'll see if anyone bites.
+My inkling is that high-touch education is not like a commodity business -- unless you have demonstrated your worth in some significant way already, no one will buy from you sight unseen. But today was a good exercise in figuring out what the actual problem really is, which is that bootcamp
+grads and junior developers can easily get pigeonholed into a career with no growth prospects. My thesis is that this happens because they never learned how to learn how things work. You become a dangerous engineer, thinker, and doer when you've figured that out.
+</p>
+
+<h3>
+Day 22 (10/23)
+</h3>
+
+<p>
+Today I'm at Recurse for the morning and grabbing coffee with a friend in the afternoon. Alina passed the bar exam! So we will celebrate tonight.
+As for the online school idea: it basically comes down to a series of well-crafted and well-sequenced "Build Your Own X", where X is some widely
+popular technology used by many companies. A first course would have to be something a mix of enthusiasts, beginners, intermediates, and advanceds
+would find interesting. So for that reason I may start with React, the popular and somewhat infamous frontend framework. Working on this narrows
+the scope a bit ("course" instead of "school"). If I can prove that my "Build Your Own X" pedagogy works exceedingly well, then people will be
+willing to pay money for this course. I'll have an easier time launching it or sharing it with those who would be interested. And I'd be able to
+build an email list for future courses. If it doesn't work, I'd have spent a couple months getting really good at React, which is fine by me!
+</p>
 </content>
