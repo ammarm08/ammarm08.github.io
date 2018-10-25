@@ -42,14 +42,14 @@
     margin: 40px auto;
   }
 
-  .name h2 {
+  h2 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 46px;
     color: black;
   }
-  .sub h3 {
+  h3 {
     font-size: 20px;
     color: black;
     margin: 8px 0;
