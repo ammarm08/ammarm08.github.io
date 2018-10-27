@@ -219,4 +219,41 @@ the scope a bit ("course" instead of "school"). If I can prove that my "Build Yo
 willing to pay money for this course. I'll have an easier time launching it or sharing it with those who would be interested. And I'd be able to
 build an email list for future courses. If it doesn't work, I'd have spent a couple months getting really good at React, which is fine by me!
 </p>
+
+<h3>
+Day 23 (10/24)
+</h3>
+
+<p>
+I spent all day reading React source code. It's very well documented! Cool to read about all the influences that went into building it. From my
+current understanding, the core ideas of it are: composition, unidirectional data flow, immutability, and small API. These three were revolutionary when React
+came out since no major UI library (until React came around) focused on making it clear in which ways one should mutate state and pass state around. Also cool
+to read about its shortcomings and use cases where it isn't the best choice. 
+</p>
+
+<h3>
+Day 24 (10/25)
+</h3>
+
+<p>
+Today I spent the morning and early afternoon reading React source code. It is well documented, so I'm having a good time.
+Maybe I'm on the lookout to prove my "learn how things work" notion, but later this afternoon I helped a client debug an issue
+directly using some of my findings from the morning from understanding React internals.
+In the late afternoon, I met up in Union Square with an old mentor. My next steps generally break down into three possible directions:
+1) take an engineering job on a team I'm jazzed about; 2) take on contract gigs to get more exposure, keep flexibility,
+charge more, and work on side hustle; 3) join an early-stage investors office and get exposure to teams and businesses. I met with my
+mentor to walk through these possibilities. The third option is interesting, but these positions are few and far between. Plus, I wonder
+how much of my interest is genuine; am I only in it for the prestige grab? Option 2 sounds most appealing at the moment, but I'll need to
+stay focused and patient.
+</p>
+
+<h3>
+Day 25 (10/26)
+</h3>
+
+<p>
+I'm at client HQ today. We were chasing down a database bug that ended up being in the way table relationships were set up with the ORM. Otherwise, I'm feeling like
+a lot of change and growth is upcoming in the next 6 months. The past couple weeks I haven't been as disciplined with my routine and productivity as I normally am,
+which usually means my unconscious mind is grappling with something big. I shall be on the lookout for any changes in my behavior next week!
+</p>
 </content>
