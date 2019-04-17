@@ -1,7 +1,7 @@
   /* generic styles */
 
   body {
-    font-family: 'Spectral', serif;
+    font-family: 'Roboto', sans-serif;
     color: #000;
     font-size: 16px;
   }
@@ -57,7 +57,7 @@
 
   blockquote {
     width: 90%;
-    margin: 25px 0;
+    margin: 16px auto;
     padding: 16px;
     background-color: #fcfeff;
     font-size: 16px;
@@ -80,7 +80,7 @@
   /* special semantic styles */
 
   .name {
-    font-family: 'Spectral';
+    font-family: 'Roboto';
     color: #424242;
     font-size: 18px;
   }
