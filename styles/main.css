@@ -1,29 +1,44 @@
   /* generic styles */
 
   body {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #232323;
-    font-size: 16px;
+    font-family: 'Roboto', serif;
+    color: #cacaca;
+    background-color: #222033;
+    font-size: 18px;
+  }
+
+  p, a, li, h1, h2, h3, h4, h5, h6, blockquote, img {
+    max-width: 38rem;
+    padding: 2px;
+    margin: auto;
+  }
+
+  h3, h4, h5, h6, p, li {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    line-height: 22px;
+  }
+
+  img {
+    display: block;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
   }
 
   h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Roboto', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 56px;
     color: #fb6754;
   }
 
-  h3 {
-    font-size: 20px;
-    color: black;
-    margin: 8px 0;
+  h3, h4 {
+    color: white;
   }
 
-  h4, h5, h6, p {
-    margin-top: 28px;
-    margin-bottom: 28px;
-    line-height: 1.3em;
+  h3 {
+    font-size: 24px;
   }
 
   ul {
@@ -31,14 +46,8 @@
     padding: 0;
   }
 
-  li {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
   a {
-    color: #000;
+    color: #cacaca;
     text-decoration: none;
     border-bottom: 1px solid #509ee3;
   }
@@ -57,17 +66,14 @@
   }
 
   blockquote {
-    margin: 0;
-    padding: 24px;
-    background-color: #fcfeff;
-    font-size: 16px;
+    margin: 0 auto;
+    font-style: italic;
   }
 
   /* grid styles */
 
   .main {
-    margin: 10px 20%;
-    width: 45%;
+    margin: 10px auto;
   }
   .inner {
     margin: 20px auto;
@@ -83,11 +89,13 @@
     font-family: 'Roboto';
     color: #424242;
     font-size: 18px;
+    margin: auto;
+    max-width: 38rem;
   }
 
   .conversation {
     width: 75%;
-    padding: 18px;
+    margin: auto;
     border-left: 4px solid #fb6754;
   }
 
@@ -112,11 +120,5 @@
   /* mobile styles */
 
   @media screen and (max-width: 768px) {
-    .main {
-      width: 90%;
-      margin: 10px auto;
-    }
-    li {
-      margin: 10px 0;
-    }
+
   }
