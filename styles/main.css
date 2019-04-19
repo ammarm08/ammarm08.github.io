@@ -2,9 +2,9 @@
 
   body {
     font-family: 'Roboto', serif;
-    color: #cacaca;
-    background-color: #222033;
-    font-size: 18px;
+    color: #656464;
+    background-color: white;
+    font-size: 16px;
   }
 
   p, a, li, h1, h2, h3, h4, h5, h6, blockquote, img {
@@ -29,12 +29,12 @@
     font-family: 'Cormorant Roboto', serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 56px;
+    font-size: 48px;
     color: #fb6754;
   }
 
   h3, h4 {
-    color: white;
+    color: black;
   }
 
   h3 {
@@ -47,22 +47,22 @@
   }
 
   a {
-    color: #cacaca;
+    color: #232323;
     text-decoration: none;
-    border-bottom: 1px solid #509ee3;
+    border-bottom: 2px solid #c9dbea;
   }
 
   a:hover {
-    color: #509ee3;
+    color: #c9dbea;
     text-decoration: none;
-    border-bottom: 1px solid #509ee3;
+    border-bottom: 2px solid #c9dbea;
     transition: 0.4s
   }
 
   a:active {
     color: #000;
     text-decoration: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #000;
   }
 
   blockquote {
@@ -94,8 +94,8 @@
   }
 
   .conversation {
-    width: 75%;
     margin: auto;
+    padding: 16px 0 16px 16px;
     border-left: 4px solid #fb6754;
   }
 
@@ -120,5 +120,7 @@
   /* mobile styles */
 
   @media screen and (max-width: 768px) {
-
+    img {
+      max-width: 90%;
+    }
   }

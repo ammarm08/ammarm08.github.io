@@ -5,7 +5,7 @@
 </globals>
 
 <macros>
-  $conversation$ := <div class="conversation">{}</div>
+  $conversation$ := <p class="conversation">{}</p>
 </macros>
 
 <content>
