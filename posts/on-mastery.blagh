@@ -1,0 +1,123 @@
+<globals>
+  $display-title$ := On Mastery
+  $title$ := Four Ways to Learn Anything
+  $date$ := November 2018
+</globals>
+
+<macros>
+  $conversation$ := <p class="conversation">{}</p>
+  $image$ := <img src={} />
+</macros>
+
+<content>
+  <p>
+  Bloom’s 2 Sigma Problem, once you see it, might change the way you think about many of your own self-conceived limitations.
+  </p>
+  <p>
+  In a 1984 study, psychologist Benjamin Bloom found that the average student tutored one-on-one using “mastery learning” methods performed two standard deviations better than students schooled under more conventional regimes.
+  </p>
+  <p>
+  The average tutored student performed 98% better than the conventional student.
+  </p>
+  <p>
+  Whoa! What’s going on?! You probably subscribed to the following model for some or most of your life:
+  </p>
+  <image>
+  https://lh3.googleusercontent.com/CGa29EEwnZqhOniCgH0QfuFbtEI_1q8lv-JbEZH9F08KuZuY_gsC3FQpYi0Bvvq3zIMFwoP5TH28uf6MmbTl8B2BI8WOVQDgKdhEi2UeAi0m93wDFor0iF6sh8e9qMCUktlhZlfs
+  </image>
+  <p>
+  That is, if “aptitude” is normally distributed in human population, so, too, is achievement. You have natural gifts, and your performance or output will correlate strongly with those gifts. If you’ve ever been graded on a curve, this is the underlying assumption at play.
+  </p>
+  <p>
+  Except. This. Is. Wrong.
+  </p>
+  <p>
+  Bloom’s findings show that, with a sufficiently strong learning model, we begin to see a different distribution:
+  </p>
+  <image>
+  https://lh5.googleusercontent.com/08CLUxE0MXvjppbnjh6xl_7CptlPalG04JMXpx-YJGno_DFMJmsCaEPyz8neWDrsyqiFzpqHiAuIXEuU4ldUt_fXDq_O1Bcf95nTi8_PqFDHv0yUDon7LocGDOY8dsmMJF67co91
+  </image>
+  <p>
+  That is, even if aptitude (or “natural talent”) is normally distributed, performance and achievement themselves can and should skew to the upper echelons if instruction is strong.
+  </p>
+  <p>
+  You may not become LeBron James, but you can become a world class basketball player even if you’re not the tallest or fastest. And this outcome can heavily depend on your learning model.
+  </p>
+  <h3>Mastery Learning + Tutoring = Success</h3>
+  <p>
+  Bloom discovered this “2 Sigma Problem” by comparing his control group with his tutored “mastery learning” group. Let’s break down each qualifier.
+  </p>
+  <p>
+  Mastery learning is the formalization of “you cannot move on until you perform 90% or higher on a subject or module of instruction.” Under this regime, a student’s failure to master indicates a failure in instruction. The teacher tweaks instruction for the next iteration, and the master-student pair slowly converge upon the desired outcome.
+  </p>
+  <p>
+  One-on-one tutoring increases the rate of iteration. A teacher immediately corrects a student when the student errs, creating a rapid feedback loop. A teacher can more effectively probe the problem space. The student must think critically rather than by rote.
+  </p>
+  <p>
+  The “mastery learning + one-on-one tutoring” combination creates conditions where simply not quitting is the name of the game. Keep showing up and we’ll converge upon success, together.
+  </p>
+  <p>
+  Compare this to the conventional regime of learning many of us grew under. You had few opportunities to test your skills, and if you didn’t do well, too bad. Everyone in a class moved in lockstep at the same rate at the same time for every module.
+  </p>
+  <p>
+  This reduced students down to more or less interchangeable parts with the same baseline competencies. Students with early leads in certain competencies were forever labeled “smart”. Students with early struggles were forever labeled “dumb”.
+  </p>
+  <p>
+  This is refreshing. Figure out what to learn, and find someone to teach you. But, as even Bloom pointed out, this can be prohibitively expensive in some populations and difficult to scale.
+  </p>
+  <h3>Simplifying Bloom’s Taxonomy</h3>
+  <p>
+  Being the analytical guy he was, Bloom developed a taxonomy of learning. It classifies a hierarchy to help develop learning objectives and assessments.
+  </p>
+  <p>
+  I got overwhelmed by it. I will simplify it a tad and leave some wiggle room for you to explore your own solutions.
+  </p>
+  <p>
+  In a nutshell, there are 4 components to learning:
+  </p>
+  <ol>
+    <li>Practice</li>
+    <li>Transmission</li>
+    <li>Theory</li>
+    <li>Judgement</li>
+  </ol>
+  <p>
+  <strong>Practice</strong> is the ritual of high-intensity repetition that aligns with the subject you’re exploring. It is applied; it produces observable artifacts (“sense data”) out there. Passes and kicks, timbres and rhythms, executable code. Not merely refinement of thought, though that is the ultimate goal.
+  </p>
+  <p>
+  <strong>Transmission</strong> is the process of learning from someone who possesses a certain degree of mastery over what you are studying. The student simply must be open to transmission, suspending his own views for a moment, for these views may indeed be the roadblock to understanding.
+  </p>
+  <p>
+  <strong>Theory</strong> is the codification and compression of observations into something that can be passed around without complete knowledge of the observations themselves. Theories are memes; they are reminders. Theories help us remember where our knowledge begins and ends.
+  </p>
+  <p>
+  <strong>Judgement</strong> is the standard of accountability by which we can assess learning. The standards will change over time, but it is quite useful to have tangible objectives. You may deem that certain objectives are harmful, in which case the learner must find new standards to assess himself against.
+  </p>
+  <p>
+  Now let’s put these four parameters in a fancy graph. There are four immediate archetypes for how to learn:
+  </p>
+  <image>
+  https://gallery.mailchimp.com/307d0a47417a39a6a788cff9f/images/ce12e920-e3f4-46cc-9555-ec0fbde9e845.png
+  </image>
+  <p>
+  <strong>College</strong> is heavy on theory and judgement, light on practice and transmission. You get assessed on things you know the words for but don’t know very well.
+  </p>
+  <p>
+  <strong>On-the-Job</strong> is heavy on judgement and practice, light on theory and transmission. You get in a lot of practice and assessment, but both of these might be teaching you the wrong thing.
+  </p>
+  <p>
+  <strong>Apprenticeship</strong> is heavy on everything except possibly theory. When successful, you get in a ton of reps and a lot of feedback from a master. You may skimp on theory and may end up relying too much on having a tutor.
+  </p>
+  <p>
+  <strong>Self-Directed</strong> is heavy on everything except possibly transmission. Because it’s just you putting things out, you get loads of practice and raw and immediate feedback everywhere. You skimp on transmission, so you may have some blind spots in your learning.
+  </p>
+  <p>
+  And there are many shapes in between! If you’re out there trying to learn something or improve at something, take note. Just don’t make the mistake of thinking following along with video lectures or showing up to the gym without any objectives will lead to any improvements.
+  </p>
+  <p>
+  To learn anything: seek out high-intensity practice, find a master-level transmitter, review the literature, and set some objectives. Stick to it for a month. Then reassess.
+  </p>
+  <p>
+  Easier said than done, but that's the core of it.
+  </p>
+</content>
