@@ -5,6 +5,7 @@
     color: #656464;
     background-color: white;
     font-size: 16px;
+    margin: 0;
   }
 
   p, a, li, h1, h2, h3, h4, h5, h6, blockquote, img {
@@ -13,7 +14,13 @@
     margin: auto;
   }
 
-  h3, h4, h5, h6, p {
+  h3, h4 {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    line-height: 30px;
+  }
+
+  h5, h6, p {
     margin-top: 28px;
     margin-bottom: 28px;
     line-height: 22px;
@@ -29,7 +36,7 @@
     font-family: 'Cormorant Roboto', serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 48px;
+    font-size: 40px;
     color: #fb6754;
   }
 
@@ -80,11 +87,12 @@
   /* grid styles */
 
   .main {
-    margin: 10px auto;
+    margin: 10px;
+    width: 70%;
   }
   .inner {
     margin: 20px auto;
-    width: 100%;
+    width: 90%;
   }
   .sub {
     margin: 40px auto;
@@ -98,6 +106,7 @@
     font-size: 18px;
     margin: auto;
     max-width: 38rem;
+    width: 90%;
   }
 
   .conversation {
@@ -127,6 +136,10 @@
   /* mobile styles */
 
   @media screen and (max-width: 768px) {
+    .main {
+      margin: 10px auto;
+      width: 90%;
+    }
     img {
       max-width: 90%;
     }
