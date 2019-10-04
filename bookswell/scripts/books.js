@@ -412,7 +412,7 @@
       if ($('#email-signup').length === 0) {
         var $email = $(`<a id="email-signup" class="list-group-item"> Sign up for weekly-ish essays on learning, technology, and complex systems </a>`);
 
-        $email.attr('href', 'https://us3.campaign-archive.com/home/?u=307d0a47417a39a6a788cff9f&id=f1720fcd45'); // link to Mailchimp signup
+        $email.attr('href', 'https://ordinary.substack.com/about'); // link to Substack signup
         $email.attr('target', '_blank');
 
         $('.books-list li:eq(4)').after($email); // after 4th book result, append email sign-up nag
