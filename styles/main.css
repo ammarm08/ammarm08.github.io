@@ -81,7 +81,7 @@ p {
 }
 
 .screens_home a:hover {
-  color: #FFE145; /* vibrant yellow */
+  color: #ffeb86; /* muted yellow */
 }
 
 .screens_home .disabled {
