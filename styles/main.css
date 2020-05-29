@@ -20,7 +20,7 @@ p {
 /* Home Page */
 
 .screens_home {
-  background-color: #FDFCFD; /* muted purple */
+  background-color: #FFFFFC; /* muted orange */
   color: #333333; /* black */
   margin: 60px auto;
   width: 650px;
@@ -118,7 +118,6 @@ and (max-device-width : 768px) {
 and (max-device-width : 450px) {
   .screens_home {
     margin: 60px 16px;
-    width: auto;
   }
 
   .screens_home .content-link {
@@ -130,7 +129,7 @@ and (max-device-width : 450px) {
 /* Blog Post */
 
 .screens_blog-post {
-  background-color: #FDFCFD; /* muted purple */
+  background-color: #FFFFFC; /* muted orange */
   color: #333333; /* black */
 }
 
@@ -192,7 +191,7 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post blockquote {
-  background-color: #FFFFFA;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 16px;
 }
