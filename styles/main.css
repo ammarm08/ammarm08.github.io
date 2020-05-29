@@ -131,6 +131,7 @@ and (max-device-width : 450px) {
 .screens_blog-post {
   background-color: #FFFFFC; /* muted orange */
   color: #333333; /* black */
+  margin: 0;
 }
 
 .screens_blog-post .logo img:hover {
