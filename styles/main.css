@@ -130,7 +130,7 @@ and (max-device-width : 450px) {
 
 .screens_blog-post {
   background-color: #2c2b2f; /* dark blue-gray */
-  color: #bbbbbb; /* muted gray */
+  color: #c1c1c1; /* muted gray */
   margin: 0;
 }
 
@@ -157,7 +157,7 @@ and (max-device-width : 450px) {
 
 .screens_blog-post p {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 26px;
   margin: 20px auto;
 }
@@ -186,6 +186,7 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post .blog-main img {
+  background-color: #FFFFFF;
   text-align: center;
   margin: 20px auto;
   width: 100%;
@@ -193,6 +194,7 @@ and (max-device-width : 450px) {
 
 .screens_blog-post blockquote {
   background-color: #484848; /* light, muted gray */
+  border-radius: 2px;
   margin: 0;
   padding: 16px;
 }
