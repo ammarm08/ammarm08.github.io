@@ -129,12 +129,12 @@ and (max-device-width : 450px) {
 /* Blog Post */
 
 .screens_blog-post {
-  background-color: #2c2b2f; /* dark blue-gray */
-  color: #c1c1c1; /* muted gray */
+  background-color: #fcfcfc; /* muted blue-gray */
+  color: #333333; /* black */
   margin: 0;
 }
 
-.screens_blog-post .logo img:hover {
+.screens_blog-post .logo-img:hover {
   opacity: 0.4;
 }
 
@@ -164,12 +164,12 @@ and (max-device-width : 450px) {
 
 .screens_blog-post a,
 .screens_blog-post a:active {
-  color: #8797f1; /* light blue */
+  color: #4d69ff; /* logo blue */
   text-decoration: none;
 }
 
 .screens_blog-post a:visited {
-  color: #8797f1; /* light blue */
+  color: #4d69ff; /* logo blue */
 }
 
 .screens_blog-post ul {
@@ -193,14 +193,14 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post blockquote {
-  background-color: #484848; /* light, muted gray */
+  background-color: #f7f0ff; /* light, muted purple */
   border-radius: 2px;
   margin: 0;
   padding: 16px;
 }
 
 .screens_blog-post .conversation {
-  border-left: 4px solid #e6b46e; /* logo orange */
+  border-left: 4px solid #a354fd; /* logo purple */
   margin: 0;
   padding: 20px 0 20px 12px;
 }
