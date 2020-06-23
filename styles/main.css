@@ -20,8 +20,8 @@ p {
 /* Home Page */
 
 .screens_home {
-  background-color: #FFFFFC; /* muted orange */
-  color: #333333; /* black */
+  background-color: #181725; /* purple-black */
+  color: #e6e6e6; /* white */
   margin: 60px auto;
   width: 650px;
   max-width: 1440px;
@@ -74,6 +74,7 @@ p {
 }
 
 .screens_home .content-type .category {
+  color: #9a9a9a; /* grey */
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 24px;
@@ -87,7 +88,7 @@ p {
 }
 
 .screens_home .content-link {
-  color: #333333; /* black */
+  color: #e6e6e6; /* white */
   display: flex;
   font-size: 18px;
   font-weight: 400;
@@ -97,11 +98,10 @@ p {
 }
 
 .screens_home a:hover {
-  color: #3454FA; /* playful blue */
+  color: #9baafb; /* playful blue */
 }
 
 .screens_home .disabled {
-  color: #9a9a9a; /* muted gray */
 }
 
 .screens_home .expand {
@@ -140,7 +140,7 @@ and (max-device-width : 450px) {
 /* Blog Post */
 
 .screens_blog-post {
-  background-color: #fcfcfc; /* muted blue-gray */
+  background-color: #FFFFFF;
   color: #333333; /* black */
   margin: 0;
 }
@@ -151,11 +151,11 @@ and (max-device-width : 450px) {
 
 .screens_blog-post .blog-content {
   margin: 60px auto;
-  width: 650px;
+  width: 768px;
 }
 
 .screens_blog-post h2 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   margin-top: 32px;
 }
@@ -167,20 +167,20 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 32px;
   margin: 20px auto;
 }
 
 .screens_blog-post a,
 .screens_blog-post a:active {
-  color: #4d69ff; /* logo blue */
+  color: #3756fd; /* darker playful blue */
   text-decoration: none;
 }
 
 .screens_blog-post a:visited {
-  color: #4d69ff; /* logo blue */
+  color: #3756fd; /* darker playful blue */
 }
 
 .screens_blog-post ul {
@@ -193,6 +193,7 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post li {
+  font-size: 20px;
   margin: 16px auto;
 }
 
@@ -231,7 +232,8 @@ and (max-device-width : 450px) {
     margin: 60px 16px;
   }
 
-  .screens_blog-post p {
+  .screens_blog-post p,
+  .screens_blog-post li {
     font-size: 16px;
     line-height: 24px;
   }
