@@ -2,7 +2,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 h1 {
@@ -49,30 +49,35 @@ p {
 
 .screens_home .title,
 .screens_home .content-type .category {
-  font-size: 18px;
   font-weight: 700;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
   width: 100%;
   vertical-align: bottom;
 }
 
+.screens_home .title {
+  font-size: 24px;
+}
+
 .screens_home .logo {
-  margin-bottom: 16px;
+  margin-bottom: 60px;
 }
 
 .screens_home .title {
-  margin-bottom: 8px;
+  margin-bottom: 32px;
 }
 
 .screens_home .tagline {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .screens_home .content-type .category {
+  font-size: 18px;
   line-height: 24px;
   margin-bottom: 24px;
+  text-transform: uppercase;
 }
 
 .screens_home .content-links {
@@ -84,7 +89,7 @@ p {
 .screens_home .content-link {
   color: #333333; /* black */
   display: flex;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 16px;
@@ -118,6 +123,12 @@ and (max-device-width : 768px) {
 and (max-device-width : 450px) {
   .screens_home {
     margin: 60px 16px;
+    width: auto;
+  }
+
+  .screens_home .tagline {
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .screens_home .content-link {
@@ -195,6 +206,7 @@ and (max-device-width : 450px) {
 .screens_blog-post blockquote {
   background-color: #f7f0ff; /* light, muted purple */
   border-radius: 2px;
+  color: #2d2d2d;
   margin: 0;
   padding: 16px;
 }
