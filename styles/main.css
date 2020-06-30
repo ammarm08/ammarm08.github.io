@@ -17,6 +17,11 @@ p {
   font-size: 16px;
 }
 
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
 /* Home Page */
 
 .screens_home {
