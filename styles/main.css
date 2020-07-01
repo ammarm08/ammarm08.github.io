@@ -76,6 +76,14 @@ p {
 .screens_home .tagline {
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.screens_home .tagline a {
+  color: #9baafb; /* playful blue */
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .screens_home .content-type .category {
