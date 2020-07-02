@@ -61,16 +61,17 @@ p {
   vertical-align: bottom;
 }
 
-.screens_home .title {
-  font-size: 24px;
-}
-
 .screens_home .logo {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
   margin-bottom: 60px;
 }
 
-.screens_home .title {
-  margin-bottom: 32px;
+.screens_home .logo .title {
+  font-size: 24px;
+  margin-left: 16px;
 }
 
 .screens_home .tagline {
@@ -139,9 +140,17 @@ and (max-device-width : 450px) {
     width: auto;
   }
 
+  .screens_home .logo .title {
+    font-size: 20px;
+  }
+
   .screens_home .tagline {
     font-size: 16px;
     line-height: 26px;
+  }
+
+  .screens_home .tagline a {
+    font-size: 16px;
   }
 
   .screens_home .content-link {
