@@ -173,7 +173,7 @@ and (max-device-width : 450px) {
 
 .screens_blog-post .blog-content {
   margin: 60px auto;
-  width: 768px;
+  width: 550px;
 }
 
 .screens_blog-post h2 {
@@ -189,9 +189,9 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 24px;
   margin: 20px auto;
 }
 
@@ -215,7 +215,7 @@ and (max-device-width : 450px) {
 }
 
 .screens_blog-post li {
-  font-size: 20px;
+  font-size: 16px;
   margin: 16px auto;
 }
 
