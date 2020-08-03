@@ -252,6 +252,11 @@ and (max-device-width : 450px) {
   padding: 20px 0 20px 12px;
 }
 
+.screens_blog-post .footnotes li {
+  font-size: 12px;
+  line-height: 18px;
+}
+
 @media only screen
 and (max-device-width : 768px) {
   .screens_blog-post .blog-content {
